@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "author": "ansh",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 325.1,
+      "left": 143.8,
+      "attrs": { "value": "600" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": 325.1,
+      "left": -105.8,
+      "attrs": { "value": "512" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot3",
+      "top": 325.1,
+      "left": 67,
+      "attrs": { "value": "300" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot4",
+      "top": 325.1,
+      "left": -19.4,
+      "attrs": { "value": "800" }
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 223.4,
+      "left": -19.8,
+      "attrs": { "temperature": "30" }
+    }
+  ],
+  "connections": [
+    [ "pot1:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "ntc1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "ntc1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "uno:A1", "ntc1:OUT", "green", [ "v0" ] ],
+    [ "pot3:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot3:SIG", "uno:A2", "green", [ "v0" ] ],
+    [ "pot3:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot4:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot4:SIG", "uno:A3", "green", [ "v0" ] ],
+    [ "pot4:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot2:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot2:SIG", "uno:A4", "green", [ "v0" ] ],
+    [ "pot2:VCC", "uno:5V", "red", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

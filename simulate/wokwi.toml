@@ -1,0 +1,4 @@
+[wokwi]
+version  = 1
+firmware = "../build/sensorsim.ino.hex"  # replace with your compiled .hex
+elf      = "../build/sensorsim.ino.elf"  # optional, used for debug
