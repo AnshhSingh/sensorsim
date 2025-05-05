@@ -4,13 +4,13 @@
 # The output is saved to out.txt in the current directory.
 
 #http://wokwi.com/dashboard/ci
-export WOKWI_CLI_TOKEN=
+export WOKWI_CLI_TOKEN=wok_G4kW3hcBkQYyaBh5PX9ZpbiKRQzy9eX7466f0a60
 # Run Wokwi simulation in the background
 wokwi-cli simulate --scenario ../scenario.yaml --serial-log-file out.txt --timeout 86400000 &
 
 # Run FastAPI server in the background
 # .venv/bin/uvicorn main:app --reload --host 0.0.0.0 --port 8001 &
-uvicorn main:app --reload --host 0.0.0.0 --port 8001 &
+uvicorn main:app --reload --host 0.0.0.0 --port 8000 &
 
 # Wait for all background processes to finish
 wait

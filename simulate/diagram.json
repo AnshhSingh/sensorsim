@@ -38,6 +38,13 @@
       "top": 223.4,
       "left": -19.8,
       "attrs": { "temperature": "30" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 128,
+      "left": -210.4,
+      "attrs": {}
     }
   ],
   "connections": [
@@ -55,7 +62,10 @@
     [ "pot4:VCC", "uno:5V", "red", [ "v0" ] ],
     [ "pot2:GND", "uno:GND.2", "black", [ "v0" ] ],
     [ "pot2:SIG", "uno:A4", "green", [ "v0" ] ],
-    [ "pot2:VCC", "uno:5V", "red", [ "v0" ] ]
+    [ "pot2:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "ldr1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "ldr1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "ldr1:AO", "uno:A5", "green", [ "h0" ] ]
   ],
   "dependencies": {}
 }
